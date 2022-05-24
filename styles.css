@@ -1,0 +1,208 @@
+/* import czcionki */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap');
+
+/* keyframes, czyli animacje */
+@keyframes wlotZGory {
+    from {top: -800px;}
+    to {top: 0px;}
+}
+
+@keyframes pokazanieSie {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* scroll */
+::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+    background: #111111;
+}
+
+/* cala strona */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(29, 29, 29);
+    width:90%;
+    margin:auto;
+    min-width:600px;
+    max-width:2000px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* przejscie do mojego githuba */
+#github {
+    display: block;
+    position: absolute;
+    left: 1%;
+    top: 2.5%;
+}
+#github img {
+    opacity: 1;
+    animation-name: pokazanieSie;
+    animation-duration: 5s;
+    height: 70%;
+    width: 70%;
+    transition: 1s;
+}
+
+/* tekst początkowy */
+#tekst{
+    margin-left: -55px;
+    margin-top: 35%;
+    justify-content: center;
+    animation-name: pokazanieSie;
+    animation-duration: 4s;
+}
+#tekst p{
+    font-size: 25px;
+}
+
+#tekst h1{
+    font-size: 60px;
+}
+
+/* żarówka */
+#zarowka{
+    top: 0px;
+    position: absolute;
+    animation-name: wlotZGory;
+    animation-duration: 3s;
+}
+
+#swiatlo{
+    display: block;
+    position: absolute;
+    left: 250px;
+    top: 350px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(222, 184, 135);
+    box-shadow: 0 0 200px rgb(222, 184, 135);
+    z-index: -1;
+}
+
+#pusta{
+    display: block;
+    position: absolute;
+    left: 250px;
+    top: 350px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: -2;
+    box-shadow: 0 0 1px 2.5px black;
+    opacity: 0.4;
+}
+
+#tloCiemne{
+    display: block;
+    position: absolute;
+    top: 245px;
+    background-color: dimgray;
+    left: 340px;
+    width: 120px;
+    height: 120px;
+    z-index: 0;
+}
+
+.linia{
+    display: block;
+    top: 265px;
+    position: absolute;
+    background-color: darkgray;
+    width: 150px;
+    height: 15px;
+    left: 325px;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+#linia2{
+    top: 295px;
+}
+
+#linia3{
+    top: 325px;
+}
+
+#linia4{
+    top: 355px;
+}
+
+#koncowka{
+    display: block;
+    position: absolute;
+    top: 205px;
+    background-color: rgb(59, 59, 59);
+    left: 355px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#kabel{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 395px;
+    width: 9px;
+    height: 300px;
+    background-color: rgb(12, 12, 12);
+    z-index: -2;
+}
+
+/* panel do sterowania żarówką */
+#panelSterowania{
+    margin-left: -55px;
+    margin-top: 15%;
+    justify-content: center;
+    display: none;
+    animation-name: pokazanieSie;
+    animation-duration: 3s;
+}
+
+#panelSterowania h1{
+    font-weight: bold;
+}
+
+.przycisk{
+    width: 70px;
+    height: 50px;
+    border: 0;
+    font-weight: bold;
+    transition: 1s;
+    border-radius: 7px;
+    margin-left: 15px;
+}
+
+.przycisk:hover{
+    background-color: grey;
+    transition: 1s;
+}
+
+#przyciski{
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+#onoff, #kolor, #jasnosc{
+    margin-top: 125px;
+    margin-left: 150px;
+}
+
+#suwakZmianaKoloru, #suwakZmianaJasnosci{
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 15px;
+    background-color: dimgray;
+    border: solid 1px dimgray;
+}
+
+small{
+    margin-left: 10px;
+    color: rgb(206, 206, 206);
+}
